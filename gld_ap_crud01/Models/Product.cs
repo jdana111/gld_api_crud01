@@ -5,11 +5,11 @@ using System.Web;
 
 namespace gld_ap_crud01.Models
 {
-    public class Product
+    public class Property
     {
-        public int Id { get; set; }
-        public string Name { get; set; }
-        public string Category { get; set; }
-        public decimal Price { get; set; }
+        public int id { get; set; }
+        public string name { get; set; }
+        public string category { get; set; }
+        public string street_name { get; set; }
     }
 }

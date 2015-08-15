@@ -1,3 +1,4 @@
+C:\Users\jdana\projects\gld_api_crud01\gld_ap_crud01\obj\Debug\gld_ap_crud01.csprojResolveAssemblyReference.cache
 C:\Users\jdana\projects\gld_api_crud01\gld_ap_crud01\bin\gld_ap_crud01.dll.config
 C:\Users\jdana\projects\gld_api_crud01\gld_ap_crud01\bin\gld_ap_crud01.dll
 C:\Users\jdana\projects\gld_api_crud01\gld_ap_crud01\bin\gld_ap_crud01.pdb
@@ -58,6 +59,5 @@ C:\Users\jdana\projects\gld_api_crud01\gld_ap_crud01\bin\Microsoft.Owin.Security
 C:\Users\jdana\projects\gld_api_crud01\gld_ap_crud01\bin\Microsoft.Owin.Security.Twitter.xml
 C:\Users\jdana\projects\gld_api_crud01\gld_ap_crud01\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
 C:\Users\jdana\projects\gld_api_crud01\gld_ap_crud01\bin\System.Web.Http.Owin.xml
-C:\Users\jdana\projects\gld_api_crud01\gld_ap_crud01\obj\Debug\gld_ap_crud01.csprojResolveAssemblyReference.cache
 C:\Users\jdana\projects\gld_api_crud01\gld_ap_crud01\obj\Debug\gld_ap_crud01.dll
 C:\Users\jdana\projects\gld_api_crud01\gld_ap_crud01\obj\Debug\gld_ap_crud01.pdb

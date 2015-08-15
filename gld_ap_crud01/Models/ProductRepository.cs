@@ -5,57 +5,57 @@ using System.Web;
 
 namespace gld_ap_crud01.Models
 {
-    public class ProductRepository : IProductRepository
+    public class PropertyRepository : IPropertyRepository
     {
-        private List<Product> products = new List<Product>();
+        private List<Property> propertys = new List<Property>();
         private int _nextId = 1;
 
-        public ProductRepository()
+        public PropertyRepository()
         {
-            Add(new Product { Name = "Tomato soup", Category = "Groceries", Price = 1.39M });
-            Add(new Product { Name = "Yo-yo", Category = "Toys", Price = 3.75M });
-            Add(new Product { Name = "Hammer", Category = "Hardware", Price = 16.99M });
+            Add(new Property { name = "House of Crud", category = "Retail", street_name = "Washington Street" });
+            Add(new Property { name = "Flea-Bag Automotive", category = "Automotive", street_name = "4th Street" });
+            Add(new Property { name = "Scary Dentist", category = "Densistry", street_name = "Highway 93" });
         }
 
-        public IEnumerable<Product> GetAll()
+        public IEnumerable<Property> GetAll()
         {
-            return products;
+            return propertys;
         }
 
-        public Product Get(int id)
+        public Property Get(int id)
         {
-            return products.Find(p => p.Id == id);
+            return propertys.Find(p => p.id == id);
         }
 
-        public Product Add(Product item)
+        public Property Add(Property item)
         {
             if (item == null)
             {
                 throw new ArgumentNullException("item");
             }
-            item.Id = _nextId++;
-            products.Add(item);
+            item.id = _nextId++;
+            propertys.Add(item);
             return item;
         }
 
         public void Remove(int id)
         {
-            products.RemoveAll(p => p.Id == id);
+            propertys.RemoveAll(p => p.id == id);
         }
 
-        public bool Update(Product item)
+        public bool Update(Property item)
         {
             if (item == null)
             {
                 throw new ArgumentNullException("item");
             }
-            int index = products.FindIndex(p => p.Id == item.Id);
+            int index = propertys.FindIndex(p => p.id == item.id);
             if (index == -1)
             {
                 return false;
             }
-            products.RemoveAt(index);
-            products.Add(item);
+            propertys.RemoveAt(index);
+            propertys.Add(item);
             return true;
         }
     }

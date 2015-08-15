@@ -8,18 +8,18 @@ using gld_ap_crud01.Models;
 
 namespace gld_ap_crud01.Controllers
 {
-    public class ProductsController : ApiController
+    public class PropertiesController : ApiController
     {
-        static readonly IProductRepository repository = new ProductRepository();
+        static readonly IPropertyRepository repository = new PropertyRepository();
 
-        public IEnumerable<Product> GetAllProducts()
+        public IEnumerable<Property> GetAllProperties()
         {
             return repository.GetAll();
         }
 
-        public Product GetProduct(int id)
+        public Property GetProperty(int id)
         {
-            Product item = repository.Get(id);
+            Property item = repository.Get(id);
             if (item == null)
             {
                 throw new HttpResponseException(HttpStatusCode.NotFound);
@@ -27,34 +27,34 @@ namespace gld_ap_crud01.Controllers
             return item;
         }
 
-        public IEnumerable<Product> GetProductsByCategory(string category)
+        public IEnumerable<Property> GetPropertiesByCategory(string category)
         {
             return repository.GetAll().Where(
-                p => string.Equals(p.Category, category, StringComparison.OrdinalIgnoreCase));
+                p => string.Equals(p.category, category, StringComparison.OrdinalIgnoreCase));
         }
 
-        public HttpResponseMessage PostProduct(Product item)
+        public HttpResponseMessage PostProperty(Property item)
         {
             item = repository.Add(item);
-            var response = Request.CreateResponse<Product>(HttpStatusCode.Created, item);
+            var response = Request.CreateResponse<Property>(HttpStatusCode.Created, item);
 
-            string uri = Url.Link("DefaultApi", new { id = item.Id });
+            string uri = Url.Link("DefaultApi", new { id = item.id });
             response.Headers.Location = new Uri(uri);
             return response;
         }
 
-        public void PutProduct(int id, Product product)
+        public void PutProperty(int id, Property property)
         {
-            product.Id = id;
-            if (!repository.Update(product))
+            property.id = id;
+            if (!repository.Update(property))
             {
                 throw new HttpResponseException(HttpStatusCode.NotFound);
             }
         }
 
-        public void DeleteProduct(int id)
+        public void DeleteProperty(int id)
         {
-            Product item = repository.Get(id);
+            Property item = repository.Get(id);
             if (item == null)
             {
                 throw new HttpResponseException(HttpStatusCode.NotFound);

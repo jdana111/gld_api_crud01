@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace gld_ap_crud01.Models
 {
-    public interface IProductRepository
+    public interface IPropertyRepository
     {
-        IEnumerable<Product> GetAll();
-        Product Get(int id);
-        Product Add(Product item);
+        IEnumerable<Property> GetAll();
+        Property Get(int id);
+        Property Add(Property item);
         void Remove(int id);
-        bool Update(Product item);
+        bool Update(Property item);
     }
 }
